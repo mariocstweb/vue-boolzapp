@@ -92,3 +92,15 @@ textarea {
   resize: none;
   color: black;
 }
+
+.text-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Aggiorna gli stili nel tuo file style.css */
+
+.text-area {
+  display: flex;
+  justify-content: space-between;
+}
