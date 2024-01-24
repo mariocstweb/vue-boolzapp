@@ -19,6 +19,7 @@
   background-color: #f3eeea;
 }
 /* WRAPPER */
+
 .wrapper {
   height: 100vh;
   overflow: hidden;
@@ -33,4 +34,8 @@
 /* ROW */
 .row {
   border: 1px solid black;
+}
+
+.userNav {
+  height: 70px;
 }
