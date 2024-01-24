@@ -54,3 +54,13 @@
 .userAlerts {
   height: 90px;
 }
+#bell {
+  border-radius: 50%;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8edafc;
+}
