@@ -2,6 +2,23 @@
   height: calc(100vh - 100px);
 }
 
+/* BGC */
+.bgc-g {
+  background-color: #d5f9ba;
+}
+
+.bgc-w {
+  background-color: #ffffff;
+}
+
+.bgc-grey {
+  background-color: #eaeaea;
+}
+
+.bgc-message {
+  background-color: #f3eeea;
+}
+/* WRAPPER */
 .wrapper {
   height: 100vh;
   overflow: hidden;
@@ -13,6 +30,7 @@
   );
 }
 
+/* ROW */
 .row {
   border: 1px solid black;
 }
