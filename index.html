@@ -36,7 +36,7 @@
         <div class="container mt-5 d-flex mb-5">
           <!-- ROW-COLS -->
           <div class="row g-2 w-100">
-            <div class="col-4 px-0">
+            <div class="col-4 px-0 bgc-w">
               <!-- User-Bar -->
               <div
                 class="userNav bgc-grey d-flex justify-content-between align-items-center p-2"
@@ -45,7 +45,7 @@
                   <div>
                     <img src="./img/avatar_1.jpg" alt="" class="img-fluid" />
                   </div>
-                  <p class="m-0 ms-2">Nome Utente</p>
+                  <p class="m-0 ms-2">{{user.name}}</p>
                 </div>
                 <div class="icon d-flex align-items-center">
                   <span class="me-3"
@@ -72,9 +72,6 @@
               <!-- SearchBar -->
               <div class="searchBar p-1 bgc-wg">
                 <div class="input-group">
-                  <!-- <span class="input-group-text"
-                    ><i class="fas fa-search"></i
-                  ></span> -->
                   <input
                     type="text"
                     class="form-control w-100 border-0"
@@ -88,13 +85,14 @@
                   <li
                     class="list-group-item d-flex"
                     v-for="contact in contacts"
+                    :key="contact.id"
+                    @click="setActiveContact(contact)"
                   >
                     <img
                       :src="`./img/avatar${contact.avatar}.jpg`"
                       :alt="contact.name"
                       class="img-fluid me-2"
                     />
-
                     <h5>{{contact.name}}</h5>
                   </li>
                 </ul>
@@ -111,13 +109,17 @@
               >
                 <div class="d-flex align-items-center">
                   <div>
-                    <img src="./img/avatar_1.jpg" alt="" class="img-fluid" />
+                    <img
+                      :src="`./img/avatar${activeContactAvatar}.jpg`"
+                      alt=""
+                      class="img-fluid"
+                    />
                   </div>
                   <div
                     class="text-start d-flex flex-column justify-content-start"
                   >
-                    <h6 class="m-0 mt-3">Nome Utente</h6>
-                    <p>Ultimo accesso effetuato:</p>
+                    <h6 class="m-0 mt-3">{{ activeContactName}}</h6>
+                    <p>Ultimo accesso oggi alle:</p>
                   </div>
                 </div>
                 <div class="icon text-start">
@@ -134,24 +136,16 @@
               </div>
               <!-- --------TEXT-AREA-------- -->
               <div class="text-area p-5 d-flex">
-                <div class="left-text p-5 w-100">
-                  <p class="contact-text bgc-w p-3 rounded left">
-                    Ciao come stai?
-                  </p>
-                  <p class="contact-text bgc-w p-3 rounded left">
-                    Ciao come stai?
-                  </p>
-                  <p class="contact-text bgc-w p-3 rounded left">
-                    Ciao come stai?
+                <div class="left-text p-5 w-100" v-if="activeContact">
+                  <p
+                    class="contact-text bgc-w p-3 rounded left"
+                    v-for="message in activeContact.messages"
+                    :key="message.id"
+                  >
+                    {{ message.text }}
                   </p>
                 </div>
                 <div class="right-text p-5 w-100">
-                  <p class="user-text bgc-g p-3 rounded right">
-                    Ciao come stai?
-                  </p>
-                  <p class="user-text bgc-g p-3 rounded right">
-                    Ciao come stai?
-                  </p>
                   <p class="user-text bgc-g p-3 rounded right">
                     Ciao come stai?
                   </p>

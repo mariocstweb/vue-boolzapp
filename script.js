@@ -4,7 +4,7 @@ const { createApp } = Vue;
 const app = createApp({
   data: () => ({
     user: {
-      name: "Nome Utente",
+      name: "Mario",
       avatar: "_io",
     },
     contacts: [
@@ -191,7 +191,23 @@ const app = createApp({
         ],
       },
     ],
+    // valore di partenza per tutti i contatti
+    activeContact: "",
+    // nome chat attiva di partenza
+    activeContactName: "",
+    // immagine user chat iniziale
+    activeContactAvatar: "",
   }),
+  methods: {
+    // al click cambia lo stato
+    // al click cambia il nome della chat attiva
+    setActiveContact(contact) {
+      this.activeContact = contact;
+      this.activeContactName = contact.name;
+      this.activeContactAvatar = contact.avatar;
+      console.log("Active Contact:", this.activeContact);
+    },
+  },
 });
 
 app.mount("#root");
