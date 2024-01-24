@@ -1,0 +1,18 @@
+body {
+  background: rgb(0, 150, 136);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 150, 136, 1) 19%,
+    rgba(217, 219, 213, 1) 19%
+  );
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+}
+
+.row {
+  border: 1px solid black;
+}
