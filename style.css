@@ -7,6 +7,10 @@
   background-color: #d5f9ba;
 }
 
+.bgc-blue {
+  background-color: #8edafc;
+}
+
 .bgc-w {
   background-color: #ffffff;
 }
@@ -36,6 +40,17 @@
   border: 1px solid black;
 }
 
+/* User-Bar */
 .userNav {
   height: 70px;
+}
+
+.userNav img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* User-Notify */
+.userAlerts {
+  height: 90px;
 }
