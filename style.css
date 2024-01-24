@@ -70,3 +70,19 @@
 }
 
 /* SearchBar */
+
+/* USER CONTACTS */
+.userContacts img {
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Text-Area */
+.text-area {
+  height: calc(100% - 160px);
+  background-image: url(./img/mine.jpg);
+}
+
+.input-area {
+  height: 90px;
+}

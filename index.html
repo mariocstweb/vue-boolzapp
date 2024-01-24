@@ -35,7 +35,7 @@
         <!-- CONTAINER -->
         <div class="container mt-5 d-flex mb-5">
           <!-- ROW-COLS -->
-          <div class="row g-2">
+          <div class="row g-2 w-100">
             <div class="col-4 px-0">
               <!-- User-Bar -->
               <div
@@ -82,27 +82,73 @@
                   />
                 </div>
               </div>
-              <div class="userContacts"></div>
+              <!-- USER CONTACTS -->
+              <div class="userContacts">
+                <ul class="list-group rounded-0">
+                  <li class="list-group-item d-flex">
+                    <img
+                      src="./img/avatar_1.jpg"
+                      alt=""
+                      class="img-fluid me-2"
+                    />
+                    <h5>Michele</h5>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="col-8">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum rem
-              adipisci culpa. Laborum aliquam quod consectetur voluptatibus
-              illum rerum placeat doloribus, tempora explicabo assumenda
-              recusandae corrupti qui voluptatem distinctio velit. Eligendi rem
-              natus id nihil facilis voluptas expedita, corrupti repellat quis
-              culpa ratione. Veritatis dolore pariatur in laudantium vitae
-              repellendus, quasi porro velit sit a ratione! Consequatur dolorem
-              beatae praesentium. Voluptates, quasi. Magni libero est explicabo
-              aut quam quis laborum excepturi architecto at. Tempora, alias
-              natus? Debitis, voluptas sunt corrupti, tempora recusandae
-              laboriosam, labore unde illum illo veniam excepturi libero? Magnam
-              dicta beatae maiores? Neque ea earum, accusantium architecto ipsam
-              cum et! Nemo sit et voluptatem totam inventore. Aut qui sed
-              ratione perferendis provident, voluptatem impedit facere ut
-              architecto hic. Est porro facilis debitis tempore placeat adipisci
-              officiis veniam fuga aliquam voluptates hic dignissimos sapiente
-              laborum soluta sed ducimus rerum dolorem, dicta assumenda,
-              reiciendis obcaecati excepturi? Numquam consequuntur porro quo.
+
+            <!-- Right-Content -->
+            <!-- User-Nav -->
+            <div class="col-8 p-0">
+              <div
+                class="userNav bgc-grey d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img src="./img/avatar_1.jpg" alt="" class="img-fluid" />
+                  </div>
+                  <div class="text-start">
+                    <p class="m-0 ms-2">Nome Utente</p>
+                    <p>Ultimo accesso effetuato:</p>
+                  </div>
+                </div>
+                <div class="icon d-flex align-items-center">
+                  <span class="me-3"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></span>
+                  <span class="me-3"
+                    ><i class="fa-solid fa-paperclip"></i
+                  ></span>
+                  <span class="me-3"
+                    ><i class="fa-solid fa-ellipsis-vertical"></i
+                  ></span>
+                </div>
+              </div>
+              <!-- ---------------- -->
+              <div class="text-area"></div>
+              <div
+                class="input-area bgc-message d-flex align-items-center justify-content-between"
+              >
+                <div>
+                  <i class="fa-regular fa-face-smile fa-2xl me-4 ms-4"></i>
+                </div>
+                <!-- <div class="w-100">
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="1"
+                  ></textarea>
+                </div> -->
+                <div class="input-group">
+                  <textarea
+                    class="form-control"
+                    placeholder="Type a message"
+                  ></textarea>
+                </div>
+                <div>
+                  <i class="fa-solid fa-microphone fa-2xl me-4 ms-4"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
