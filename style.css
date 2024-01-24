@@ -83,6 +83,14 @@
   background-image: url(./img/mine.jpg);
 }
 
+.right {
+  margin-bottom: 70px;
+}
+
+.left {
+  margin-top: 70px;
+}
+
 /* Input Area */
 .input-area {
   height: 90px;
@@ -91,16 +99,4 @@
 textarea {
   resize: none;
   color: black;
-}
-
-.text-area {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Aggiorna gli stili nel tuo file style.css */
-
-.text-area {
-  display: flex;
-  justify-content: space-between;
 }

@@ -85,13 +85,17 @@
               <!-- USER CONTACTS -->
               <div class="userContacts">
                 <ul class="list-group rounded-0">
-                  <li class="list-group-item d-flex">
+                  <li
+                    class="list-group-item d-flex"
+                    v-for="contact in contacts"
+                  >
                     <img
-                      src="./img/avatar_1.jpg"
-                      alt=""
+                      :src="`./img/avatar${contact.avatar}.jpg`"
+                      :alt="contact.name"
                       class="img-fluid me-2"
                     />
-                    <h5>Michele</h5>
+
+                    <h5>{{contact.name}}</h5>
                   </li>
                 </ul>
               </div>
@@ -131,12 +135,24 @@
               <!-- --------TEXT-AREA-------- -->
               <div class="text-area p-5 d-flex">
                 <div class="left-text p-5 w-100">
-                  <p class="contact-text bgc-w p-3 rounded mb-3">
+                  <p class="contact-text bgc-w p-3 rounded left">
+                    Ciao come stai?
+                  </p>
+                  <p class="contact-text bgc-w p-3 rounded left">
+                    Ciao come stai?
+                  </p>
+                  <p class="contact-text bgc-w p-3 rounded left">
                     Ciao come stai?
                   </p>
                 </div>
                 <div class="right-text p-5 w-100">
-                  <p class="user-text bgc-g p-3 rounded mb-3">
+                  <p class="user-text bgc-g p-3 rounded right">
+                    Ciao come stai?
+                  </p>
+                  <p class="user-text bgc-g p-3 rounded right">
+                    Ciao come stai?
+                  </p>
+                  <p class="user-text bgc-g p-3 rounded right">
                     Ciao come stai?
                   </p>
                 </div>
