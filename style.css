@@ -83,6 +83,12 @@
   background-image: url(./img/mine.jpg);
 }
 
+/* Input Area */
 .input-area {
   height: 90px;
+}
+
+textarea {
+  resize: none;
+  color: black;
 }
