@@ -22,6 +22,10 @@
 .bgc-message {
   background-color: #f3eeea;
 }
+
+.bgc-wg {
+  background-color: #fafafa;
+}
 /* WRAPPER */
 
 .wrapper {
@@ -64,3 +68,5 @@
   justify-content: center;
   color: #8edafc;
 }
+
+/* SearchBar */
