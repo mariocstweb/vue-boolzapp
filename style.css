@@ -45,6 +45,13 @@ img {
   background-color: #fafafa;
 }
 
+/* Left-Col */
+
+#user-section,
+#notify-section {
+  height: 70px;
+}
+
 #bell {
   border-radius: 50%;
   background-color: white;
@@ -56,26 +63,17 @@ img {
   color: #8edafc;
 }
 
-.message-area {
-  background-image: url(./img/mine.jpg);
-}
-
-#user-section,
-#notify-section {
-  height: 70px;
-}
-
+/* Right-Col */
 header {
   height: 70px;
 }
 
-footer {
-  min-height: 70px;
+.message-area {
+  background-image: url(./img/mine.jpg);
 }
 
-textarea {
-  resize: none;
-  color: black;
+footer {
+  min-height: 70px;
 }
 
 .message-container {
