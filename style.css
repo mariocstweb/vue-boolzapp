@@ -1,9 +1,24 @@
+body {
+  background: rgb(0, 150, 136);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 150, 136, 1) 15%,
+    rgba(217, 219, 213, 1) 15%
+  );
+  height: 100vh;
+}
+
 .container {
-  height: calc(100vh - 100px);
+  height: 90%;
 }
 
 li {
   cursor: pointer;
+}
+
+img {
+  width: 60px;
+  border-radius: 50%;
 }
 /* BGC */
 .bgc-g {
@@ -29,77 +44,46 @@ li {
 .bgc-wg {
   background-color: #fafafa;
 }
-/* WRAPPER */
 
-.wrapper {
-  height: 100vh;
-  overflow: hidden;
-  background: rgb(0, 150, 136);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 150, 136, 1) 15%,
-    rgba(217, 219, 213, 1) 15%
-  );
-}
-
-/* ROW */
-.row {
-  border: 1px solid black;
-}
-
-/* User-Bar */
-.userNav {
-  height: 70px;
-}
-
-.userNav img {
-  width: 60px;
-  border-radius: 50%;
-}
-
-/* User-Notify */
-.userAlerts {
-  height: 90px;
-}
 #bell {
   border-radius: 50%;
   background-color: white;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #8edafc;
 }
 
-/* SearchBar */
-
-/* USER CONTACTS */
-.userContacts img {
-  height: 60px;
-  border-radius: 50%;
-}
-
-/* Text-Area */
-.text-area {
-  height: calc(100% - 160px);
+.message-area {
   background-image: url(./img/mine.jpg);
 }
 
-.right {
-  margin-bottom: 70px;
+#user-section,
+#notify-section {
+  height: 70px;
 }
 
-.left {
-  margin-top: 70px;
+header {
+  height: 70px;
 }
 
-/* Input Area */
-.input-area {
-  height: 90px;
+footer {
+  min-height: 70px;
 }
 
 textarea {
   resize: none;
   color: black;
+}
+
+.message-container {
+  display: flex;
+}
+.message-container.sent {
+  justify-content: end;
+}
+.message-container.received {
+  justify-content: start;
 }
