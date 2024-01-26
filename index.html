@@ -90,7 +90,7 @@
                   class="list-group-item d-flex"
                   v-for="contact in contacts"
                   :key="contact.id"
-                  @click="setActiveContact(contact)"
+                  @click="setActiveContact(contact.id)"
                 >
                   <img
                     :src="`./img/avatar${contact.avatar}.jpg`"
@@ -112,7 +112,7 @@
               <div class="d-flex align-items-center">
                 <div>
                   <img
-                    :src="`./img/avatar${activeContactAvatar}.jpg`"
+                    :src="`./img/avatar${currentContact.avatar}.jpg`"
                     alt=""
                     class="img-fluid"
                   />
@@ -120,7 +120,7 @@
                 <div
                   class="text-start d-flex flex-column justify-content-start"
                 >
-                  <h6 class="m-0 mt-3">{{ activeContactName}}</h6>
+                  <h6 class="m-0 mt-3">{{ currentContact.name }}</h6>
                   <p>Ultimo accesso oggi alle:</p>
                 </div>
               </div>
@@ -145,7 +145,7 @@
                 <li
                   class="message-container p-3 received"
                   class="message-container p-3"
-                  v-for="message in activeContact.messages"
+                  v-for="message in currentContact.messages"
                   :key="message.id"
                 >
                   <div class="message p-2 rounded-3 bgc-g">

@@ -191,22 +191,22 @@ const app = createApp({
         ],
       },
     ],
-    // valore di partenza per tutti i contatti
-    activeContact: "",
-    // nome chat attiva di partenza
-    activeContactName: "",
-    // immagine user chat iniziale
-    activeContactAvatar: "",
+
+    currentId: 1,
     newUserText: "",
   }),
+  computed: {
+    currentContact() {
+      const contact = this.contacts.find((contact) => {
+        if (contact.id === this.currentId) return true;
+        else return false;
+      });
+      return contact;
+    },
+  },
   methods: {
-    // al click cambia lo stato
-    // al click cambia il nome della chat attiva
-    setActiveContact(contact) {
-      this.activeContact = contact;
-      this.activeContactName = contact.name;
-      this.activeContactAvatar = contact.avatar;
-      console.log("Active Contact:", this.activeContact);
+    setActiveContact(id) {
+      this.currentId = id;
     },
   },
 });
