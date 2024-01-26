@@ -197,6 +197,7 @@ const app = createApp({
     activeContactName: "",
     // immagine user chat iniziale
     activeContactAvatar: "",
+    newUserText: "",
   }),
   methods: {
     // al click cambia lo stato

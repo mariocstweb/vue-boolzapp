@@ -34,13 +34,13 @@
       <!-- Container -->
       <div class="container">
         <!-- Row -->
-        <div class="row g-0 text-center h-100">
+        <div class="row h-100">
           <!-- Left-Col -->
           <div class="col-4 h-100 p-0 d-flex flex-column bgc-w">
             <!-- User-Section -->
             <div
               id="user-section"
-              class="flex-shrink-0 d-flex justify-content-between"
+              class="flex-shrink-0 d-flex justify-content-between bgc-grey p-2"
             >
               <!-- Left-Side -->
               <div class="d-flex align-items-center">
@@ -50,14 +50,12 @@
                 <p class="m-0 ms-2">{{user.name}}</p>
               </div>
               <!-- Right-Side -->
-              <div class="icon d-flex align-items-center">
-                <span class="me-3"
-                  ><i class="fa-solid fa-circle-notch"></i
-                ></span>
-                <span class="me-3"><i class="fa-solid fa-message"></i></span>
-                <span class="me-3"
-                  ><i class="fa-solid fa-ellipsis-vertical"></i
-                ></span>
+              <div
+                class="icon d-flex align-items-center justify-content-around"
+              >
+                <i class="fa-solid fa-circle-notch me-3"></i>
+                <i class="fa-solid fa-message me-3"></i>
+                <i class="fa-solid fa-ellipsis-vertical me-3"></i>
               </div>
             </div>
             <!-- Notify-Section -->
@@ -108,36 +106,32 @@
           <!-- Right-Col -->
           <div class="col-8 h-100 p-0 d-flex flex-column">
             <!-- Chat Header -->
-            <header class="flex-shrink-0 p-0">
-              <div
-                class="userNav bgc-grey d-flex justify-content-between align-items-center"
-              >
-                <div class="d-flex align-items-center">
-                  <div>
-                    <img
-                      :src="`./img/avatar${activeContactAvatar}.jpg`"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div
-                    class="text-start d-flex flex-column justify-content-start"
-                  >
-                    <h6 class="m-0 mt-3">{{ activeContactName}}</h6>
-                    <p>Ultimo accesso oggi alle:</p>
-                  </div>
+            <header
+              class="flex-shrink-0 p-0 userNav bgc-grey d-flex justify-content-between align-items-center"
+            >
+              <div class="d-flex align-items-center">
+                <div>
+                  <img
+                    :src="`./img/avatar${activeContactAvatar}.jpg`"
+                    alt=""
+                    class="img-fluid"
+                  />
                 </div>
-                <div class="icon text-start">
-                  <span class="me-3"
-                    ><i class="fa-solid fa-magnifying-glass"></i
-                  ></span>
-                  <span class="me-3"
-                    ><i class="fa-solid fa-paperclip"></i
-                  ></span>
-                  <span class="me-3"
-                    ><i class="fa-solid fa-ellipsis-vertical"></i
-                  ></span>
+                <div
+                  class="text-start d-flex flex-column justify-content-start"
+                >
+                  <h6 class="m-0 mt-3">{{ activeContactName}}</h6>
+                  <p>Ultimo accesso oggi alle:</p>
                 </div>
+              </div>
+              <div class="icon text-start">
+                <span class="me-3"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></span>
+                <span class="me-3"><i class="fa-solid fa-paperclip"></i></span>
+                <span class="me-3"
+                  ><i class="fa-solid fa-ellipsis-vertical"></i
+                ></span>
               </div>
             </header>
             <!-- Chat-Text -->
