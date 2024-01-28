@@ -194,6 +194,8 @@ const app = createApp({
 
     currentId: 1,
     newUserText: "",
+    // Flag vuoto per recuperare i dati del v-model
+    searchList: "",
   }),
   computed: {
     currentContact() {
@@ -203,10 +205,28 @@ const app = createApp({
       });
       return contact;
     },
+    filteredContacts() {
+      const newArray = this.searchList.toLowerCase();
+      return this.contacts.filter((contact) =>
+        contact.name.toLowerCase().includes(newArray)
+      );
+    },
   },
   methods: {
     setActiveContact(id) {
       this.currentId = id;
+    },
+
+    sendMessage() {
+      if (!this.newUserText) return;
+      const newUserText = {
+        id: new Date().getTime(),
+        date: new Date().toLocaleDateString(),
+        status: "sent",
+        text: this.newUserText,
+      };
+      this.currentContact.messages.push(newUserText);
+      this.newUserText = "";
     },
   },
 });
